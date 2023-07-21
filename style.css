@@ -4,7 +4,60 @@
     src: url("fonts/Inter-Regular.woff2") format("woff2");
 }
 
+:root {
+    --sidebar-color: #6366f1;
+    --sidebar-text-color: #e0e7ff;
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Inter, sans-serif;
+}
+
+.sidebar > ul > li > img, img[alt="dashboard"] {
+    /* Changes color to white from black */
+    filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+    width: 1.5rem;
+}
+
+img[alt = "dashboard"] {
+    width: 2.5rem;
+}
+
+.sidebar-title {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: minmax(250px, 20%) 3fr;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--sidebar-color);
+    color: var(--sidebar-text-color);
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 50px;
+    padding: 20px;
+    font-weight: 600;
+    align-content: start;
+}
+
+.sidebar ul {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    list-style-type: none;
+    gap: 10px;
+}
+
+.sidebar ul li {
+    display:flex;
+    align-items: center;
+    gap: 0.8rem;
 }
