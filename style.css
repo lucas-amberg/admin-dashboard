@@ -73,6 +73,10 @@ img[alt = "dashboard"] {
     gap: 0.8rem;
 }
 
+.sidebar ul li:hover {
+    cursor: pointer;
+}
+
 .content-container {
     display:grid;
     grid-template-rows: minmax(100px,20vh) minmax(400px, 80vh);
@@ -210,10 +214,11 @@ img[alt = "dashboard"] {
     padding: 20px;
 }
 
-.projects > div {
+.content-heading {
     color: white;
     font-size: 1.2rem;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .projects ul {
@@ -227,12 +232,12 @@ img[alt = "dashboard"] {
     flex-direction: column;
     color: white;
     background-color: #111827;
-    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.295);
+    box-shadow: 0px 1px 5px 1px rgba(255, 255, 255, 0.1);
     gap: 2px;
     padding: 30px;
     border-radius: 10px;
     border-left: 5px solid var(--sidebar-color);
-    height: 130px;
+    height: max(170px,7vh);
     font-size: 0.9rem;
     padding-bottom: 10px;
 }
@@ -254,4 +259,73 @@ img[alt = "dashboard"] {
 
 .card-buttons img {
     width: 1.5rem;
+}
+
+.projects ul li:hover {
+    background-color: #312e81;
+    border-color: white;
+}
+
+.announcements {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding: 20px;
+}
+
+.trending {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.announcements-card {
+    height: fit-content;
+    width: max(180px,15vw);
+    background-color: #111827;
+    box-shadow: 0px 1px 5px 1px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: fit-content 1fr 1fr;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.announcements-card > :nth-child(1) {
+    grid-row: 1 / 2;
+    border-bottom: rgba(255,255,255,0.1) 1px solid;
+    height: fit-content;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.announcements-card :nth-child(2) {
+    grid-row: 2 / 3;
+    border-bottom: rgba(255,255,255,0.1) 1px solid;
+    height:fit-content;
+}
+
+.announcements-card :nth-child(3) {
+    grid-row: 3 / 4;
+    height: fit-content;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.announcements h4 {
+    font-size: 0.9rem;
+}
+
+.announcements-card div {
+    padding: 15px;
+}
+
+.announcements-card div:hover {
+    background-color: #312e81;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img[src$=".svg"]:hover {
+    cursor: pointer;
 }
