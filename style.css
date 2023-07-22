@@ -343,6 +343,7 @@ img[src$=".svg"]:hover {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 100px;
+    margin-left: 15px;
 }
 
 .platform-item {
@@ -351,7 +352,7 @@ img[src$=".svg"]:hover {
     gap: 10px;
     width: max(180px,15vw);
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding-top: 15px;
     padding-bottom: 15px;
 }
