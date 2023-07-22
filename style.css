@@ -255,6 +255,8 @@ img[alt = "dashboard"] {
     justify-content: flex-end;
     align-items: flex-end;
     height: 50px;
+    margin-top: auto;
+    margin-bottom: 15px;
 }
 
 .card-buttons img {
